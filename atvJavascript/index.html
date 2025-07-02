@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercícios JavaScript</title>
+    <link rel="icon" type="image/x-icon"
+        href="http://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2018/05/cropped-logo-0.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .exercicio {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .header {
+            background: #aecdf5;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .conteudo {
+            display: none;
+            padding: 10px;
+        }
+
+        pre {
+            background: #9da3ab;
+            padding: 10px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+        }
+
+        input {
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+
+        button {
+            background-color: #6ca8f5;
+            margin: 5px 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista de Exercícios (JavaScript)</h1>
+
+    <!-- Exercício 1 -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 1 - Forma com #</div>
+        <div class="conteudo">
+            <label for="linhas1">Quantidade de linhas:</label>
+            <input type="number" id="linhas1" min="1" />
+            <button onclick="carregarScript('ex1.js', () => executarEx1())">Executar</button>
+            <pre id="resultado1"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 2 -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 2 - Tabuleiro de Xadrez</div>
+        <div class="conteudo">
+            <label for="linhas2">Quantidade de linhas:</label>
+            <input type="number" id="linhas2" min="1" />
+            <button onclick="carregarScript('ex2.js', () => executarEx2())">Executar</button>
+            <pre id="resultado2"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 3 - Verificando Palíndromos -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 3 - Verificando Palíndromos</div>
+        <div class="conteudo">
+            <input type="text" id="palavra3" placeholder="Digite uma palavra" />
+            <button onclick="carregarScript('ex3.js', () => executarEx3())">Verificar</button>
+            <pre id="resultado3"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 4 - FizzBuzz -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 4 - FizzBuzz</div>
+        <div class="conteudo">
+            <button onclick="carregarScript('ex4.js', () => executarEx4())">Executar no console</button>
+            <pre id="resultado4">Abra o console do navegador (F12)</pre>
+        </div>
+    </div>
+
+    <!-- Exercício 5 - Mínimo e Máximo -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 5 - Mínimo e Máximo</div>
+        <div class="conteudo">
+            <label for="numA">Número A:</label>
+            <input type="number" id="numA" />
+            <label for="numB">Número B:</label>
+            <input type="number" id="numB" />
+            <button onclick="carregarScript('ex5.js', () => executarEx5())">Calcular</button>
+            <pre id="resultado5"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 6 - Recursividade e Divisibilidade -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 6 - Recursividade e Divisibilidade</div>
+        <div class="conteudo">
+            <label for="num6">Número:</label>
+            <input type="number" id="num6" />
+            <label for="mod6">Módulo (mod):</label>
+            <input type="number" id="mod6" />
+            <button onclick="carregarScript('ex6.js', () => executarEx6())">Verificar</button>
+            <pre id="resultado6"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 7 - Contando caracteres -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 7 - Contando caracteres</div>
+        <div class="conteudo">
+            <label for="frase7">Frase:</label>
+            <input type="text" id="frase7" />
+            <label for="char7">Caractere a contar:</label>
+            <input type="text" id="char7" maxlength="1" />
+            <button onclick="carregarScript('ex7.js', () => executarEx7())">Contar</button>
+            <pre id="resultado7"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 8 - Intervalo -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 8 - Intervalo</div>
+        <div class="conteudo">
+            <label for="min8">Mínimo:</label>
+            <input type="number" id="min8" />
+            <label for="max8">Máximo:</label>
+            <input type="number" id="max8" />
+            <label for="inc8">Incremento:</label>
+            <input type="number" id="inc8" placeholder="Padrão: 1" />
+            <button onclick="carregarScript('ex8.js', () => executarEx8())">Gerar intervalo</button>
+            <pre id="resultado8"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 9 - Revertendo um array -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 9 - Revertendo um array</div>
+        <div class="conteudo">
+            <label for="array9">Digite os elementos separados por vírgula:</label>
+            <input type="text" id="array9" placeholder="ex: 1,2,3,4" />
+            <button onclick="carregarScript('ex9.js', () => executarEx9())">Reverter</button>
+            <pre id="resultado9"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 10 - Trabalhando com listas -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 10 - Trabalhando com listas</div>
+        <div class="conteudo">
+            <label for="array10">Digite os elementos separados por vírgula:</label>
+            <input type="text" id="array10" placeholder="ex: 1,2,3" />
+            <button onclick="carregarScript('ex10.js', () => executarEx10())">Converter</button>
+            <pre id="resultado10"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 11 - Deep Equals -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 11 - Deep Equals</div>
+        <div class="conteudo">
+            <label for="obj1">Objeto 1 (JSON):</label>
+            <textarea id="obj1" rows="4" cols="40">{ "nome": "Julinha", "idade": 17 }</textarea>
+            <label for="obj2">Objeto 2 (JSON):</label>
+            <textarea id="obj2" rows="4" cols="40">{ "nome": "Julinha", "idade": 17 }</textarea>
+            <button onclick="carregarScript('ex11.js', () => executarEx11())">Comparar</button>
+            <pre id="resultado11"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 12 - Ordenação -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 12 - Ordenação com Função de Alta Ordem</div>
+        <div class="conteudo">
+            <label for="array12">Digite os números separados por vírgula:</label>
+            <input type="text" id="array12" placeholder="ex: 4,1,7,2" />
+
+            <label for="criterio12">Critério de ordenação:</label>
+            <select id="criterio12">
+                <option value="crescente">Crescente</option>
+                <option value="decrescente">Decrescente</option>
+                <option value="crescenteImpares">Crescente ímpares</option>
+                <option value="decrescentePares">Decrescente pares</option>
+            </select>
+
+            <button onclick="carregarScript('ex12.js', () => executarEx12())">Ordenar</button>
+            <pre id="resultado12"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 13 - Criptografia -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">
+            Exercício 13 - Criptografia
+        </div>
+        <div class="conteudo">
+            <label for="texto13">Texto para criptografar:</label>
+            <input type="text" id="texto13" placeholder="Digite um texto" />
+
+            <label for="shift13">Critério de criptografia (para cifra de César, padrão 3 dígitos):</label>
+            <input type="number" id="chave13" value="3" />
+
+            <button onclick="carregarScript('ex13.js', () => executarEx13())">
+                Criptografar
+            </button>
+            <pre id="resultado13"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 14 - Verificando um número com função de alta ordem -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 14 - Verificando um número</div>
+        <div class="conteudo">
+            <label for="numero14">Digite um número:</label>
+            <input type="number" id="numero14" />
+
+            <label for="verificacao14">Tipo de verificação:</label>
+            <select id="verificacao14">
+                <option value="impar">É ímpar?</option>
+                <option value="primo">É primo?</option>
+            </select>
+
+            <button onclick="carregarScript('ex14.js', () => executarEx14())">Verificar</button>
+            <pre id="resultado14"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 15 - Transformações em uma String -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 15 - Transformações em uma String</div>
+        <div class="conteudo">
+            <label for="texto15">Digite um texto:</label>
+            <input type="text" id="texto15" placeholder="Ex: Casa suja, chão sujo" />
+
+            <label for="transformacao15">Transformação:</label>
+            <select id="transformacao15">
+                <option value="vogaisMaiusculas">Caixa alta nas vogais</option>
+                <option value="consoantesMaiusculas">Caixa alta nas consoantes</option>
+                <option value="vogaisMinusculas">Caixa baixa nas vogais</option>
+                <option value="consoantesMinusculas">Caixa baixa nas consoantes</option>
+            </select>
+
+            <button onclick="carregarScript('ex15.js', () => executarEx15())">Transformar</button>
+            <pre id="resultado15"></pre>
+        </div>
+    </div>
+
+    <!-- Exercício 16 - Funções Matriciais -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 16 - Funções Matriciais</div>
+        <div class="conteudo">
+            <label for="linhas16">Linhas:</label>
+            <input type="number" id="linhas16" value="3" />
+
+            <label for="colunas16">Colunas:</label>
+            <input type="number" id="colunas16" value="3" />
+
+            <label for="funcao16">Função matricial:</label>
+            <select id="funcao16">
+                <option value="soma">m[i,j] = i + j</option>
+                <option value="produto">m[i,j] = i * j</option>
+                <option value="identidade">m[i,j] = i == j ? 1 : 0</option>
+                <option value="divisaoQuadrado">m[i,j] = i^2 / (j+1)</option>
+                <option value="comparacao">m[i,j] = i > j ? 1 : (i < j ? 5 : 0)</option>
+            </select>
+
+            <button onclick="carregarScript('ex16.js', () => executarEx16())">Gerar Matriz</button>
+            <pre id="resultado16"></pre>
+        </div>
+    </div>
+
+    <script>
+        function toggleConteudo(header) {
+            const conteudo = header.nextElementSibling;
+            conteudo.style.display = conteudo.style.display === "block" ? "none" : "block";
+        }
+
+        function carregarScript(src, callback) {
+            if (document.querySelector(`script[src="${src}"]`)) {
+                callback(); // já carregado
+                return;
+            }
+
+            const script = document.createElement("script");
+            script.src = src;
+            script.onload = callback;
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+
+</html>
