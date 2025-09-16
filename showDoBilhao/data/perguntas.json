@@ -1,0 +1,27 @@
+[
+  {
+    "enunciado": "Qual a capital do Brasil?",
+    "alternativas": ["São Paulo", "Brasília", "Rio de Janeiro", "Belo Horizonte"],
+    "resposta": 1
+  },
+  {
+    "enunciado": "Quantos estados tem o Brasil?",
+    "alternativas": ["24", "25", "26", "27"],
+    "resposta": 3
+  },
+  {
+    "enunciado": "Quem pintou a Mona Lisa?",
+    "alternativas": ["Michelangelo", "Leonardo da Vinci", "Raphael", "Donatello"],
+    "resposta": 1
+  },
+  {
+    "enunciado": "Qual é o maior planeta do sistema solar?",
+    "alternativas": ["Terra", "Marte", "Júpiter", "Saturno"],
+    "resposta": 2
+  },
+  {
+    "enunciado": "Em que ano o homem pisou na Lua pela primeira vez?",
+    "alternativas": ["1965", "1969", "1971", "1959"],
+    "resposta": 1
+  }
+]
