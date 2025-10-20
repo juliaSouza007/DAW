@@ -1,0 +1,17 @@
+/* Estiliza todos os parágrafos */
+p {
+    font-family: Arial, sans-serif;
+    color: blue;
+}
+
+/* Estiliza os títulos */
+h1, h2 {
+    color: darkgreen;
+    font-family: Verdana, sans-serif;
+}
+
+/* Estiliza a classe "colortext" */
+.colortext {
+    font-weight: bold;
+    color: red;
+}
