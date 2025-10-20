@@ -1,0 +1,52 @@
+[
+  {
+    "enunciado": "Qual a capital do Brasil?",
+    "alternativas": ["São Paulo", "Brasília", "Rio de Janeiro", "Belo Horizonte"],
+    "resposta": 1
+  },
+  {
+    "enunciado": "Qual é o pintor do famoso quadro 'A Última Ceia'?",
+    "alternativas": ["Michelangelo", "Leonardo da Vinci", "Raphael", "Donatello"],
+    "resposta": 1
+  },
+  {
+    "enunciado": "Qual é o maior planeta do sistema solar?",
+    "alternativas": ["Terra", "Marte", "Júpiter", "Saturno"],
+    "resposta": 2
+  },
+  {
+    "enunciado": "Em que ano ocorreu a queda do Muro de Berlim?",
+    "alternativas": ["1987", "1989", "1991", "1993"],
+    "resposta": 1
+  },
+  {
+    "enunciado": "Qual é a língua oficial da Argentina?",
+    "alternativas": ["Português", "Espanhol", "Inglês", "Francês"],
+    "resposta": 1
+  },
+  {
+    "enunciado": "Quem é o autor da obra 'O Pequeno Príncipe'?",
+    "alternativas": ["Miguel de Cervantes", "Antoine de Saint-Exupéry", "Jorge Luis Borges", "Gabriel García Márquez"],
+    "resposta": 1
+  },
+  {
+    "enunciado": "Qual elemento químico tem o símbolo 'H'?",
+    "alternativas": ["Hélio", "Hidrogênio", "Hafnio", "Holmium"],
+    "resposta": 1
+  },
+  {
+    "enunciado": "Qual país é conhecido como 'Terra do Sol Nascente'?",
+    "alternativas": ["China", "Japão", "Coreia do Sul", "Tailândia"],
+    "resposta": 1
+  },
+  {
+    "enunciado": "Qual desses animais é um mamífero?",
+    "alternativas": ["Crocodilo", "Golfinho", "Tubarão", "Galinha"],
+    "resposta": 1
+  },
+  {
+    "enunciado": "Em que continente fica o Egito?",
+    "alternativas": ["África", "Ásia", "Europa", "América do Sul"],
+    "resposta": 0
+  }
+]
