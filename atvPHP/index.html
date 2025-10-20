@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercícios PHP</title>
+    <link rel="icon" type="image/x-icon"
+        href="http://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2018/05/cropped-logo-0.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .exercicio {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .header {
+            background: #aecdf5;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .conteudo {
+            display: none;
+            padding: 10px;
+        }
+
+        pre {
+            background: #9da3ab;
+            padding: 10px;
+            border-radius: 6px;
+            white-space: pre-wrap;
+        }
+
+        input {
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+
+        button {
+            background-color: #6ca8f5;
+            margin: 5px 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista de Exercícios (PHP)</h1>
+    <h3>Aluna: Júlia Martins Souza</h3>
+
+    <!-- Exercício PHP - Cálculo de Média com Conceito -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 1 - Cálculo de Média</div>
+        <div class="conteudo">
+            <form id="formPHP" method="POST" action="ex1.php" target="resultadoPHPFrame">
+                <label for="notasPHP">Digite as notas separadas por vírgula:</label>
+                <input type="text" name="notas" id="notasPHP" placeholder="Ex: 7,8,6,9" />
+                <button type="submit">Calcular Média</button>
+            </form>
+            <iframe name="resultadoPHPFrame" id="resultadoPHPFrame" style="width:100%; height:100px; border:none;"></iframe>
+        </div>
+    </div>
+
+    <!-- Exercício PHP - Tabuada Personalizada -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 2 - Tabuada Personalizada</div>
+        <div class="conteudo">
+            <form method="POST" action="ex2.php" target="resultadoTabuadaFrame">
+                <label for="numero">Digite um número inteiro positivo:</label>
+                <input type="number" name="numero" id="numero" />
+                <button type="submit">Gerar Tabuada</button>
+            </form>
+            <iframe name="resultadoTabuadaFrame" style="width:100%; height:200px; border:none;"></iframe>
+        </div>
+    </div>
+
+    <!-- Exercício PHP - Sistema de Menu -->
+    <div class="exercicio">
+        <div class="header" onclick="toggleConteudo(this)">Exercício 3 - Sistema de Menu</div>
+        <div class="conteudo">
+            <form method="POST" action="ex3.php" target="resultadoMenuFrame">
+                <label for="opcao">Escolha uma opção:</label>
+                <select name="opcao" id="opcao">
+                    <option value="1">1 - Mostrar números pares de 1 a 20</option>
+                    <option value="2">2 - Mostrar números ímpares de 1 a 20</option>
+                    <option value="3">3 - Sair</option>
+                </select>
+                <button type="submit">Executar</button>
+            </form>
+            <iframe name="resultadoMenuFrame" style="width:100%; height:150px; border:none;"></iframe>
+        </div>
+    </div>
+
+    <script>
+            function toggleConteudo(header) {
+                const conteudo = header.nextElementSibling;
+                conteudo.style.display = conteudo.style.display === "block" ? "none" : "block";
+            }
+
+            function carregarScript(src, callback) {
+                if (document.querySelector(`script[src="${src}"]`)) {
+                    callback(); // já carregado
+                    return;
+                }
+
+                const script = document.createElement("script");
+                script.src = src;
+                script.onload = callback;
+                document.body.appendChild(script);
+            }
+    </script>
+</body>
+</html>
